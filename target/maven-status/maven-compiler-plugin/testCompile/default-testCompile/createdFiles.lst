@@ -1,0 +1,10 @@
+com\shopzilla\service\OrderService.class
+com\shopzilla\service\ReviewService.class
+com\shopzilla\service\ProductService.class
+com\shopzilla\dao\OrderDAO.class
+com\shopzilla\dao\ProductDAO.class
+com\shopzilla\dao\ReviewDAO.class
+com\shopzilla\dao\CartDAO.class
+com\shopzilla\service\CartService.class
+com\shopzilla\service\UserService.class
+com\shopzilla\dao\UserDAO.class

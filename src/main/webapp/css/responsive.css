@@ -1,0 +1,324 @@
+/* =========================================================
+   SHOPZILLA - RESPONSIVE DESIGN
+   ========================================================= */
+
+/* ---------- Large Screens ---------- */
+
+@media (max-width: 1200px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .hero-content {
+        max-width: 520px;
+    }
+
+    .hero-title {
+        font-size: 52px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ---------- Tablets ---------- */
+
+@media (max-width: 992px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .hero {
+        min-height: 560px;
+    }
+
+    .hero-content {
+        max-width: 470px;
+    }
+
+    .hero-title {
+        font-size: 44px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .offer-banner {
+        padding: 50px 30px;
+    }
+
+    .newsletter-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+}
+
+/* ---------- Small Tablets / Mobile ---------- */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    /* Hero */
+
+    .hero {
+        min-height: 500px;
+        padding: 60px 5%;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 38px;
+        line-height: 1.1;
+    }
+
+    .hero-subtitle {
+        font-size: 12px;
+    }
+
+    .hero-description {
+        max-width: 420px;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hero-btn {
+        padding: 13px 22px;
+        font-size: 11px;
+    }
+
+    /* Section */
+
+    .section {
+        padding: 45px 0;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .section-subtitle {
+        font-size: 13px;
+    }
+
+    /* Features */
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .feature-card {
+        padding: 25px 15px;
+    }
+
+    /* Categories */
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .category-card {
+        min-height: 220px;
+    }
+
+    .category-card h3 {
+        font-size: 18px;
+    }
+
+    /* Offer */
+
+    .offer-banner {
+        padding: 45px 20px;
+    }
+
+    .offer-title {
+        font-size: 32px;
+    }
+
+    /* Footer */
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+/* ---------- Mobile Phones ---------- */
+
+@media (max-width: 576px) {
+
+    .container {
+        width: 92%;
+    }
+
+    /* Hero */
+
+    .hero {
+        min-height: 470px;
+        padding: 45px 20px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+        max-width: 320px;
+    }
+
+    .hero-buttons {
+        margin-top: 20px;
+    }
+
+    .hero-btn {
+        padding: 12px 18px;
+    }
+
+    /* Sections */
+
+    .section {
+        padding: 38px 0;
+    }
+
+    .section-title {
+        font-size: 23px;
+    }
+
+    /* Features */
+
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .feature-card {
+        padding: 20px 10px;
+    }
+
+    .feature-card i {
+        font-size: 22px;
+    }
+
+    .feature-card h4 {
+        font-size: 12px;
+    }
+
+    .feature-card p {
+        font-size: 10px;
+    }
+
+    /* Categories */
+
+    .category-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .category-card {
+        min-height: 190px;
+    }
+
+    .category-card h3 {
+        font-size: 16px;
+    }
+
+    /* Newsletter */
+
+    .newsletter {
+        padding: 40px 15px;
+    }
+
+    .newsletter-title {
+        font-size: 24px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+        min-height: 45px;
+    }
+
+    /* Footer */
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 15px;
+    }
+
+    .footer-column h4 {
+        font-size: 12px;
+    }
+
+    .footer-column a {
+        font-size: 11px;
+    }
+}
+
+/* ---------- Very Small Phones ---------- */
+
+@media (max-width: 380px) {
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero {
+        min-height: 430px;
+    }
+
+    .category-card {
+        min-height: 165px;
+    }
+
+    .category-card h3 {
+        font-size: 14px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}

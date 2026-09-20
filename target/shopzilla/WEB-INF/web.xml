@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app
+        xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://xmlns.jcp.org/xml/ns/javaee
+        http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+        version="4.0">
+
+    <display-name>Shopzilla</display-name>
+
+
+    <!-- =====================================================
+         SESSION CONFIGURATION
+         ===================================================== -->
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+
+        <cookie-config>
+            <http-only>true</http-only>
+            <secure>false</secure>
+        </cookie-config>
+
+        <tracking-mode>COOKIE</tracking-mode>
+    </session-config>
+
+
+    <!-- =====================================================
+         DEFAULT WELCOME PAGE
+         ===================================================== -->
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+
+    <!-- =====================================================
+         AUTH FILTER
+         ===================================================== -->
+
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>com.shopzilla.filter.AuthFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/buyer/*</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/seller/*</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+
+
+    <!-- =====================================================
+         LOGIN SERVLET
+         ===================================================== -->
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.shopzilla.controller.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- =====================================================
+         REGISTER SERVLET
+         ===================================================== -->
+
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.shopzilla.controller.RegisterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- =====================================================
+         LOGOUT SERVLET
+         ===================================================== -->
+
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.shopzilla.controller.LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- =====================================================
+         PRODUCT SERVLET
+         ===================================================== -->
+
+    <servlet>
+        <servlet-name>ProductServlet</servlet-name>
+        <servlet-class>com.shopzilla.controller.ProductServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProductServlet</servlet-name>
+        <url-pattern>/ProductServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- =====================================================
+         CART SERVLET
+         ===================================================== -->
+
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>com.shopzilla.controller.CartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/CartServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- =====================================================
+         CHECKOUT SERVLET
+         ===================================================== -->
+
+    <servlet>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <servlet-class>com.shopzilla.controller.CheckoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <url-pattern>/CheckoutServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- =====================================================
+         ORDER SERVLET
+         ===================================================== -->
+
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>com.shopzilla.controller.OrderServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/OrderServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- =====================================================
+         REVIEW SERVLET
+         ===================================================== -->
+
+    <servlet>
+        <servlet-name>ReviewServlet</servlet-name>
+        <servlet-class>com.shopzilla.controller.ReviewServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ReviewServlet</servlet-name>
+        <url-pattern>/ReviewServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- =====================================================
+         SELLER SERVLET
+         ===================================================== -->
+
+    <servlet>
+        <servlet-name>SellerServlet</servlet-name>
+        <servlet-class>com.shopzilla.controller.SellerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SellerServlet</servlet-name>
+        <url-pattern>/SellerServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- =====================================================
+         ADMIN SERVLET
+         
+         IMPORTANT:
+         AdminServlet is NOT declared here because
+         AdminServlet.java already uses @WebServlet.
+         Declaring it again causes duplicate mapping.
+         ===================================================== -->
+
+
+    <!-- =====================================================
+         AI CHAT SERVLET
+         ===================================================== -->
+
+    <servlet>
+        <servlet-name>ChatServlet</servlet-name>
+        <servlet-class>com.shopzilla.controller.ChatServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ChatServlet</servlet-name>
+        <url-pattern>/ChatServlet</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>

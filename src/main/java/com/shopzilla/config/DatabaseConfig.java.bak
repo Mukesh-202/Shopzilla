@@ -1,0 +1,45 @@
+package com.shopzilla.config;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+/**
+ * Database configuration for Shopzilla.
+ *
+ * Uses SQLite database.
+ */
+public class DatabaseConfig {
+
+    private static final String DATABASE_URL =
+            "jdbc:sqlite:shopzilla.db";
+
+    private DatabaseConfig() {
+        // Prevent object creation
+    }
+
+    /**
+     * Returns a connection to the Shopzilla SQLite database.
+     */
+    public static Connection getConnection() throws SQLException {
+
+        try {
+            Class.forName("org.sqlite.JDBC");
+        } catch (ClassNotFoundException e) {
+            throw new SQLException(
+                    "SQLite JDBC Driver not found.",
+                    e
+            );
+        }
+
+        Connection connection =
+                DriverManager.getConnection(DATABASE_URL);
+
+        // Enable foreign-key support
+        try (var statement = connection.createStatement()) {
+            statement.execute("PRAGMA foreign_keys = ON");
+        }
+
+        return connection;
+    }
+}
